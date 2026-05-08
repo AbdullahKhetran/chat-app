@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Websocket</title>
+        <title>Chat App</title>
         <link href="style.css" rel="stylesheet">
         <!-- socket.io -->
          <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.min.js" integrity="sha512-8ExARjWWkIllMlNzVg7JKq9RKWPlJABQUNq6YvAjE/HobctjH/NA+bSiDMDvouBVjp4Wwnf1VP1OEv7Zgjtuxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -12,15 +12,33 @@
     </head>
 
     <body>
-        <form>
-            <input type="text" placeholder="Your message">
-            <button>Send</button>
-        </form>
-        
-        <!-- display messages -->
-        <ul></ul>        
+        <main>
+            <!-- form to join chat room -->
+            <form class="form-join">
+                <input type="text" id="name" maxlength="8" placeholder="Your name" size="5" required>
+                <input type="text" id="room" placeholder="Chat room" size="5" required>
+                <button id="join" type="submit">Join</button>
+            </form>
 
-        <!-- display activity -->
-         <p class="activity"></p>
+            <ul class="chat-display"></ul>
+
+            <p class="user-list"></p>
+
+            <p class="room-list"></p>
+
+            <p class="activity"></p>
+
+            <!-- form to send message -->
+            <form class="form-message">
+                <input type="text" id="message" placeholder="Your message" required>
+                <button type="submit">Send</button>
+            </form>
+            
+            <!-- display messages -->
+            <ul></ul>        
+
+            <!-- display activity -->
+            <p class="activity"></p>
+        </main>
     </body>
 </html>
